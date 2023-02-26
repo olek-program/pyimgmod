@@ -9,7 +9,7 @@ classifiers = [
 ]
  
 setup(
-  name='genimg',
+  name='pytimgen',
   version='0.0.1',
   description='Library for generating  images and modify it',
   long_description='This library can generate imaages and can modify it this is version in programming',
