@@ -15,15 +15,16 @@ LONG_DESCRIPTION = 'A package that allows generate images with numbers, letters 
 
 # Setting up
 setup(
-    package_dir = {"imgen": "src"},
-    name="pyimgen",
+    package_dir = {"": "src"},
+    packages=['imgen'],
+    name="pyimgmod",
     version=VERSION,
     author="Lemskyy (olek-program)",
     author_email="<lemskyyyt+projects@gmail.com>",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    packages=find_packages(),
+    #packages=find_packages(),
     install_requires=['pypng'],
     keywords=['python', 'image', 'py', 'png', 'library'],
     classifiers=[
