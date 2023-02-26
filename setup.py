@@ -1,24 +1,37 @@
 from setuptools import setup, find_packages
- 
-classifiers = [
-  'Development Status :: 1 - Planning',
-  'Intended Audience :: Education',
-  'Operating System :: Microsoft :: Windows :: Windows 10',
-  'License :: OSI Approved :: MIT License',
-  'Programming Language :: Python :: 3'
-]
- 
+import codecs
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
+
+VERSION = '0.0.1'
+DESCRIPTION = 'Generating and modyfing inages'
+LONG_DESCRIPTION = 'A package that allows generate images with numbers, letters and modify the inages'
+
+
+
+# Setting up
 setup(
-  name='pytimgen',
-  version='0.0.1',
-  description='Library for generating  images and modify it',
-  long_description='This library can generate imaages and can modify it this is version in programming',
-  url='',  
-  author='Lemskyy',
-  author_email='lemskyyyt@gmail.com',
-  license='MIT', 
-  classifiers=classifiers,
-  keywords='python images generator modyfier',
-  packages=find_packages(),
-  install_requires=['pypng'] 
+    package_dir = {"imgen": "src"},
+    name="pyimgen",
+    version=VERSION,
+    author="Lemskyy (olek-program)",
+    author_email="<lemskyyyt+projects@gmail.com>",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=long_description,
+    packages=find_packages(),
+    install_requires=['pypng'],
+    keywords=['python', 'image', 'py', 'png', 'library'],
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
 )
